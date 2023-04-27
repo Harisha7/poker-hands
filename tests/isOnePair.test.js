@@ -2,17 +2,17 @@ const Hand = require('../Hand');
 const CompareHands = require('../CompareHands');
 const suits = '♥♦♣♠';
 
-test('Check that isOnePair returns truthy is one pair', () => {
+test('test that isOnePair returns truthy is one pair', () => {
 	let hand = new Hand('♠10','♥10','♠8','♥7','♣4');
 	expect(CompareHands.isOnePair(hand)).toBeTruthy();
 })
 
-test('Check that isOnePair returns falsy is not one pair', () => {
+test('test that isOnePair returns falsy is not one pair', () => {
 	let hand = new Hand('♥k','♦2','♣4','♠5','6♠');
 	expect(CompareHands.isOnePair(hand)).toBeFalsy();
 });
 
-test('Check that falsy isOnePair returns as 0', () => {
+test('test that falsy isOnePair returns as 0', () => {
 	let hand = new Hand('♥k','♦2','♣4','♠5','6♠');
 	expect(CompareHands.isOnePair(hand)).toBe(0);
 });

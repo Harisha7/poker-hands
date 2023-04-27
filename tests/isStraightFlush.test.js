@@ -2,17 +2,17 @@ const Hand = require('../Hand');
 const CompareHands = require('../CompareHands');
 const suits = '♥♦♣♠';
 
-test('check that isStraightFlush returns truthy if straight flush', () => {
+test('test that isStraightFlush returns truthy if straight flush', () => {
   let hand = new Hand('♥A','♥K','♥Q','♥J','♥T');
   expect(CompareHands.isStraightFlush(hand)).toBeTruthy();
 })
 
-test('Check that isStraightFlush returns falsy is not straight flush', () => {
+test('test that isStraightFlush returns falsy is not straight flush', () => {
 	let hand = new Hand('♥3','♦4','♣6','♠2','♦A');
 	expect(CompareHands.isStraightFlush(hand)).toBeFalsy();
 }) ;
 
-test('Check that falsy isStraightFlush returns as 0', () => {
+test('test that falsy isStraightFlush returns as 0', () => {
 	let hand = new Hand('♥3','♦4','♣6','♠2','♦A');
 	expect(CompareHands.isStraightFlush(hand)).toBe(0);
 }) ;
